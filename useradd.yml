@@ -1,0 +1,9 @@
+---
+- hosts: all
+  become: yes
+  tasks:
+  - name: create user
+    user:
+      name: "{{ username }}"
+      state: absent
+      shell: /bin/bash

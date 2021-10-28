@@ -1,0 +1,16 @@
+---
+- hosts: all
+  vars: 
+    games:
+    - cricket
+    - volleyball
+    - football
+    - basketball
+    - carrroms
+    - tennis
+  tasks: 
+  - name: print variables
+    debug:
+      msg: "{{ item }}"
+    with_items: 
+    - "{{ games }}"
